@@ -7,6 +7,9 @@
         <h2>Saisumithra Jagarlamudi Computes</h2>
         <div>  
             <input type="number" name="number1" id="number1"><br>
+            <input type="number" name="number2" id="number2"><br>
+            
+
             
         </div>
         <button onclick="remoteCompute()">Remote compute</button>
@@ -17,9 +20,9 @@
         <script>
             const remoteCompute=()=>{
                 let number1=document.getElementById("number1").value
-                
+                let number2=document.getElementById("number2").value
 
-                let url=`http://127.0.0.1:3001?x=${number1}`
+                let url=`http://127.0.0.1:3001?x=${number1}&y=${number2}`
                 fetch(url).then(
                     (response)=>{
                         console.log(response)
