@@ -21,15 +21,18 @@ const server =
        
           // console.log("Look for query parameter data: " + search_params.get("data"))
           var x = Number(search_params.get("x"));
+          var y = Number(search_params.get("y"));
 
           console.log(x);
+          console.log(y);
          
           console.log("Look for query parameter data: " + search_params.get("x"));
+          console.log("Look for query parameter data: " + search_params.get("y"));
           
           // Process the queries here
           res.statusCode = 200      //code for OK
           res.setHeader('Content-Type', 'text/plain') 
-          res.write(` Math.cos(${x}) is ${Math.cos(x)}`)
+          res.write(` Math.cos(${x}) is ${Math.cos(x)} and Math.cos(${y}) is ${Math.cos(y)} `)
           res.end();
         
         
